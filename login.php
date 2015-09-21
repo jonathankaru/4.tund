@@ -1,5 +1,16 @@
 <?php
 
+
+	// ühenduse loomiseks kasuta
+	require_once("../config.php");
+	$database = "if15_jonakar_1";
+	$mysqli = new mysqli($servername, $username, $password, $database);
+	
+	//check connection
+	if(mysqli->connect_error) {
+		die("connect error ".mysqli_connect_error());
+	}
+
   // muuutujad errorite jaoks
 	$email_error = "";
 	$password_error = "";
